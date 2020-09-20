@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta charset = "utf-8" />
+  <title>Проба React</title>
+</head> 
+<body> 
+  <div id = "container"></div> 
+      
+  <script src = "https://unpkg.com/react@15/dist/react.js"></script> 
+  <script src = "https://unpkg.com/react-dom@15/dist/react-dom.js"></script> 
+      
+  <script src = "ListOfGoodsComponent.js"></script>
+  <!-- <link rel:"stylesheet" type:"text/css" href:"MyComponent.css" /> -->
+
+  <script>
+    var listOfGoods = 
+    [
+      {
+          Id : 1,
+          Name : 'Book',
+          Price : 100,
+          Quantity : 3,
+          Url : ''
+      },
+      {
+          Id : 2,
+          Name : 'Shoes',
+          Price : 50,
+          Quantity : 10,
+          Url : ''
+      },
+      {
+          Id : 3,
+          Name : 'Computer',
+          Price : 100,
+          Quantity : 1,
+          Url : ''
+      }
+    ];
+
+    var shopName = 'IShop';
+
+    ReactDOM.render(
+      React.createElement(ListOfGoodsComponent,
+      { 
+        shopName : shopName,
+        listOfGoods : listOfGoods
+      }),  
+      document.getElementById('container') 
+    );
+
+  </script>
+
+</body> 
+</html>
