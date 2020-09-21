@@ -1,0 +1,18 @@
+.ListOfGoods .Items
+{
+  border: double gray 3px;
+  width: 180px;
+  padding: 3px 7px;
+  background-color: #F0F0F0;
+}
+
+.ListOfGoods .Header
+{
+    text-align: left;
+}
+
+.ListOfGoods img
+{
+  width: 100px;
+  height: 100px;
+}

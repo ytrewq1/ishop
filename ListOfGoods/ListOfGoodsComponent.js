@@ -5,18 +5,22 @@ var ListOfGoodsComponent = React.createClass({
     render : function  () {
 
         var listOfGoodsTrs = this.props.listOfGoods.map(element => React.DOM.tr(
-            { key: element.Id, className: 'item' },
+            { key: element.Id},
             React.DOM.td(null, element.Name),
             React.DOM.td(null, element.Price),
             React.DOM.td(null, element.Quantity),
-            React.DOM.td(null, element.Url)
+            React.DOM.td(null, null, React.createElement('img', { 
+                src : element.Url, 
+                alt : element.Name, 
+                title : element.Name
+            }, null))
         )); 
         
         return React.DOM.div( 
             {className:'ListOfGoods'}, 
-            React.DOM.h1( {className:'header'}, this.props.shopName ),
+            React.DOM.h3( {className:'Header'}, this.props.shopName ),
             React.DOM.table(
-                { className:'items' },
+                { className:'Items' },
                 React.DOM.thead(
                     null,
                     React.DOM.tr(
