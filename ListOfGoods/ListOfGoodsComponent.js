@@ -10,9 +10,16 @@ var ListOfGoodsComponent = React.createClass({
             React.DOM.td(null, element.Price),
             React.DOM.td(null, element.Quantity),
             //TODO Ask about difference between React.DOM. and React.createElement('a')
-            React.DOM.td(null, null, React.createElement('a', { 
-                href : element.Url
-            }, element.Url))
+            React.DOM.td(null, null, React.createElement('a', 
+                { href : element.Url }, 
+                element.Url)),
+            React.DOM.img(
+                    {                
+                        src : element.ImageUrl, 
+                        alt : element.Name,
+                        title : element.Name
+                    },
+                    null)
         )); 
         
         return React.DOM.div( 
@@ -27,7 +34,8 @@ var ListOfGoodsComponent = React.createClass({
                         React.DOM.th(null, 'Name'),
                         React.DOM.th(null, 'Price, $'),
                         React.DOM.th(null, 'Items left'),
-                        React.DOM.th(null, ''),
+                        React.DOM.th(null, 'Url'),
+                        React.DOM.th(null, 'Image')
                     ), 
                 ),
                 React.DOM.tbody(
